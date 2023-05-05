@@ -39,7 +39,7 @@ pipeline {
                             groupId: pom.groupId,
                             version: pom.version,
                             repository: maven-central-repository,
-                            credentialsId: NEXUS_CRED,
+                            credentialsId: NEXUS_CREDENTIAL_ID,
                             artifacts: [
                                 [artifactId: pom.artifactId,
                                 classifier: '',
