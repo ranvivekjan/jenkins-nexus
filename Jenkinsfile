@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label : 'java-build-node'
+    }
     /*environment {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
@@ -9,13 +11,13 @@ pipeline {
     }*/
 
     stages {
-        stage("Clone code from GitHub") {
+        /*stage("Clone code from GitHub") {
             steps {
                 script {
                     git branch: 'main', credentialsId: 'githubwithpassword', url: 'https://github.com/ranvivekjan/jenkins-nexus';
                 }
             }
-        }
+        }*/
         stage("Maven Build") {
             steps {
                 script {
