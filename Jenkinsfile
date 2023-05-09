@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label : 'java-build-node'
+        label 'java-build-node'
     }
     /*environment {
         NEXUS_VERSION = "nexus3"
